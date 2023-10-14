@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+        <main class="container main-pokemon">
+            <div class="header-main-pokemon">
+               
+                    <span class="number-pokemon"> #<%= id %> </span>
+                    <div class="container-img-pokemon">
+                        <img src="<%= datosPokemon.sprites.other.home.front_shiny %>" alt="pokemon bulbasaur" />
+                    </div>
+          
+
+                <div class="container-info-pokemon">
+
+                    <h1>
+                        <%= namePoke %>
+                    </h1>
+                    <div class="card-types">
+                        <% for (let i=0; i < typePokemon.length; i++) { %>
+                            <span class="<%= typePokemon[i].type.name %>">
+                                <%= typePokemon[i].type.name %>
+                            </span>
+                            <% } %>
+                    </div>
+                    <div class="info-pokemon">
+                        <div class="group-info">
+                            <p>Altura</p>
+                            <span>
+                                <%= datosPokemon.height / 10 %> m
+                            </span>
+                        </div>
+                        <div class="group-info">
+                            <p>Peso</p>
+                            <span>
+                                <%= datosPokemon.weight / 10 %> Kg
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-stats">
+                <h1>Estadísticas</h1>
+                <div class="stats">
+                    <span>Hp</span>
+                    <div class="stat-group">
+                        <div class="progress-bar"
+                            style="width: <%= hp.base_stat * 2 %>px; background-color: <%= (hp.base_stat < 50) ? 'red' : 'green' %>;">
+                        </div>
+                        <span class="counter-stat">
+                            <%= hp.base_stat %>
+                        </span>
+                    </div>
+                    <span>Attack</span>
+                    <div class="stat-group">
+                        <div class="progress-bar"
+                            style="width: <%= attack.base_stat * 2 %>px; background-color: <%= (attack.base_stat < 50) ? 'red' : 'green' %>;">
+                        </div>
+                        <span class="counter-stat">
+                            <%= attack.base_stat %>
+                        </span>
+                    </div>
+                    <span>Defense</span>
+                    <div class="stat-group">
+                        <div class="progress-bar"
+                            style="width: <%= defense.base_stat * 2 %>px; background-color: <%= (defense.base_stat < 50) ? 'red' : 'green' %>;">
+                        </div>
+                        <span class="counter-stat">
+                            <%= defense.base_stat %>
+                        </span>
+                    </div>
+                    <span>Special Attack</span>
+                    <div class="stat-group">
+                        <div class="progress-bar"
+                            style="width: <%= specialAttack.base_stat * 2 %>px; background-color: <%= (specialAttack.base_stat < 50) ? 'red' : 'green' %>;">
+                        </div>
+                        <span class="counter-stat">
+                            <%= specialAttack.base_stat %>
+                        </span>
+                    </div>
+                    <span>Special Defense</span>
+                    <div class="stat-group">
+                        <div class="progress-bar"
+                            style="width: <%= specialDefense.base_stat * 2 %>px; background-color: <%= (specialDefense.base_stat < 50) ? 'red' : 'green' %>;">
+                        </div>
+                        <span class="counter-stat">
+                            <%= specialDefense.base_stat %>
+                        </span>
+                    </div>
+                    <span>Speed</span>
+                    <div class="stat-group">
+                        <div class="progress-bar"
+                            style="width: <%= speed.base_stat * 2 %>px; background-color: <%= (speed.base_stat < 50) ? 'red' : 'green' %>;">
+                        </div>
+                        <span class="counter-stat">
+                            <%= speed.base_stat %>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+</body>
+
+<%- include('./partials/footer') %>
+
+</html>

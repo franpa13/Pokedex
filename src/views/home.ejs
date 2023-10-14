@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/stylebodyHome.css">
 </head>
+
 <body>
     <!-- HEADER -->
     <%- include('./partials/header') %>
-
-     
-
-    <!-- FOOTER -->
-    <%- include('./partials/footer') %>
+        <!-- ... -->
+        <main class="list-pokemon">
+            <% pokemones.results.forEach((pokemon, index)=> { %>
+           
+                <a href="/pokemon/<%= index +1 %>" class="card-pokemon">
+                    <div class="card-img">
+                        <img src="<%= images[index] %>" alt="pokemon <%= pokemon.name %>" />
+                    </div>
+                    <div class="card-info">
+                        <span class="pokemon-id">N° <%= index + 1 %></span>
+                        <h3>
+                            <%= pokemon.name %>
+                        </h3>
+                        <div class="card-types">
+                            <% if (type && type[index]) { %>
+                                <% type[index].forEach(tipos=> { %>
+                                    <span class="<%= tipos.type.name %>" >
+                                        <%= tipos.type.name %>
+                                    </span>
+                                    <% }) %>
+                                        <% } %>
+                        </div>
+                    </div>
+                </a>
+                <% }) %>
+        </main>
+       
+        </main>
+        <!-- FOOTER -->
+        <%- include('./partials/footer') %>
 </body>
+
 </html>

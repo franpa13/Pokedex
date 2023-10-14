@@ -1,80 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
-:root{
+:root {
     --color-fondo: rgb(218, 218, 218);
     --color-fire: #ff7402;
-	--color-grass: #9bcc50;
-	--color-steel: #9eb7b8;
-	--color-water: #4592c4;
-	--color-psychic: #f366b9;
-	--color-ground: #ab9842;
-	--color-ice: #51c4e7;
-	--color-flying: #3dc7ef;
-	--color-ghost: #4d5b64;
-	--color-normal: #a4acaf;
-	--color-poison: #7e0058;
-	--color-rock: #a38c21;
-	--color-fighting: #d56723;
-	--color-dark: #707070;
-	--color-bug: #729f3f;
-	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
-	--color-electric: #bba909;
-	--color-fairy: #fdb9e9;
-	--color-shadow: #7b62a3;
-	--color-unknow: #757575;
-    
-	--color-primary: #006d77;
-	--color-primary-hover: #83c5be;
+    --color-grass: #9bcc50;
+    --color-steel: #9eb7b8;
+    --color-water: #4592c4;
+    --color-psychic: #f366b9;
+    --color-ground: #ab9842;
+    --color-ice: #51c4e7;
+    --color-flying: #3dc7ef;
+    --color-ghost: #4d5b64;
+    --color-normal: #a4acaf;
+    --color-poison: #7e0058;
+    --color-rock: #a38c21;
+    --color-fighting: #d56723;
+    --color-dark: #707070;
+    --color-bug: #729f3f;
+    --color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    --color-electric: #bba909;
+    --color-fairy: #fdb9e9;
+    --color-shadow: #7b62a3;
+    --color-unknow: #757575;
+
+    --color-primary: #006d77;
+    --color-primary-hover: #83c5be;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Montserrat';
 }
 
 /* Globales */
-.container{
+.container {
     max-width: 100vw;
     margin: 0 auto;
 }
+.main-pokemon{
+margin-left: 5vw;
+margin-right: 5;
 
+   
+}
 
-header{
- 
+header {
+
     display: flex;
     align-items: center;
     justify-content: space-around;
- background-color:var(--color-fondo) ;
+    background-color: var(--color-fondo);
     padding: 40px 0;
 }
 
-.logo img{
+.logo img {
     width: 150px;
 }
 
-header form{
+header form {
     display: flex;
     align-items: center;
 
     gap: 15px;
 }
 
-.form-group{
+.form-group {
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
     border: 1px solid #555;
     padding: 15px 20px;
     border-radius: 25px;
 }
 
-.form-group input{
+.form-group input {
     font-family: inherit;
     width: 300px;
     border: none;
@@ -84,13 +89,13 @@ header form{
 }
 
 
-.icon-search{
+.icon-search {
     width: 20px;
     height: 20px;
     stroke: #555;
 }
 
-.btn-search{
+.btn-search {
     border: none;
     outline: none;
     border-radius: 25px;
@@ -102,17 +107,19 @@ header form{
     color: #fff;
 }
 
-.btn-search:hover{
+.btn-search:hover {
     background-color: var(--color-primary-hover);
     color: #000;
 }
 
 /* Btn Filter */
-.container-filter{
+.container-filter {
+    padding-left: 5vw;
     display: flex;
+    background-color: var(--color-fondo);
 }
 
-.icon-filter{
+.icon-filter {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -121,11 +128,268 @@ header form{
     cursor: pointer;
 }
 
-.icon-filter .icon{
+.icon-filter .icon {
     width: 30px;
     height: 30px;
     stroke: #555;
 }
+
+/* CARDS STYLES */
+
+.list-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+.card-pokemon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+    text-decoration: none;
+}
+.card-img{
+    border-radius: 5px;
+    background-color:rgb(48, 48, 48);
+    display: flex;
+    justify-content: center;
+    
+}
+.card-img img{
+    width: 16vw;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo);
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: 'Onest', sans-serif;
+    color: rgb(14, 13, 13);
+}
+.pokemon-id{
+    text-align: center;
+    padding: 10px;
+}
+.card-info h3{
+    padding: 10px;
+}
+.card-types{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    color:rgb(255, 255, 255);
+
+}
+.card-types span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2vw;
+    text-align: center;
+    width: 6vw;
+    border-radius: 5px;
+}
+ 
+
+/* 
+TIPOS DE POKEMONS */
+.water {
+	background-color: var(--color-water);
+}
+
+.grass {
+	background-color: var(--color-grass);
+}
+
+.poison {
+	background-color: var(--color-poison);
+}
+
+.fire {
+	background-color: var(--color-fire);
+}
+
+.bug {
+	background-color: var(--color-bug);
+}
+
+.dragon {
+	background: var(--color-dragon);
+}
+
+.flying {
+	background-color: var(--color-flying);
+}
+
+.ground {
+	background-color: var(--color-ground);
+}
+
+.steel {
+	background-color: var(--color-steel);
+}
+
+.psychic {
+	background-color: var(--color-psychic);
+}
+
+.ice {
+	background-color: var(--color-ice);
+}
+
+.ghost {
+	background-color: var(--color-ghost);
+}
+
+.normal {
+	background-color: var(--color-normal);
+}
+
+.rock {
+	background-color: var(--color-rock);
+}
+
+.electric {
+	background-color: var(--color-electric);
+}
+
+.fighting {
+	background-color: var(--color-fighting);
+}
+
+.fairy {
+	background-color: var(--color-fairy);
+}
+
+.dark {
+	background-color: var(--color-dark);
+}
+
+
+/* ======================================= 
+Styles of Pokemon Single Page
+=======================================  */
+.main-pokemon{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.header-main-pokemon{
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+.container-info-pokemon{
+   display: flex;
+justify-content: center;
+align-items: center;}
+.container-info-pokemon h1{
+    text-align: center;
+    margin:10vw
+}
+.card-types{
+width: 40vw;
+display: flex;
+justify-content: space-between;
+ 
+}
+.number-pokemon{
+    position: absolute;
+    top: -70px;
+    left: 0;
+
+    font-size: 300px;
+    font-weight: 700;
+    color: var(--color-primary-hover);
+}
+
+.container-img-pokemon{
+    order: 2;
+    flex: 1;
+    padding: 25px 25px 25px 0;
+}
+
+.container-img-pokemon img{
+    width: 100%;
+}
+
+.container-info-pokemon{
+    display: flex;
+    flex-direction: column;
+
+    order: 1;
+    flex: 1;
+}
+
+.container-info-pokemon h1{
+    text-align: right;
+    font-size: 50px;
+
+
+}
+
+.info-pokemon{
+    width: 38vw;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+.group-info p{
+    font-weight: 700;
+}
+
+
+/* Stats */
+.container-stats{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    gap: 20px;
+    flex: 1;
+    margin-left: 30vw;
+}
+
+.stat-group{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-group span{
+    flex: 20%;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.progress-bar{
+    display: flex;
+    align-items: center;
+   
+    height: 30px;
+ 
+    border-radius: 10px;
+}
+
 
 /* ESTILOS FOOTER */
 
@@ -136,6 +400,7 @@ header form{
     background-color: var(--color-fondo);
     color: var(--color-primary);
     padding: 20px 0;
+    /* margin-top: 100vw; */
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
@@ -144,14 +409,16 @@ header form{
     display: flex;
     align-items: center;
     justify-content: space-around;
- background-color:var(--color-fondo) ;
+    background-color: var(--color-fondo);
     padding: 40px 0;
 }
 
 .footer-logo img {
-    width: 100px; /* Tamaño del logo de Pokémon */
+    width: 100px;
+    /* Tamaño del logo de Pokémon */
 }
-.icon{
+
+.icon {
     border: none;
     outline: none;
     border-radius: 25px;
@@ -162,13 +429,15 @@ header form{
     background-color: var(--color-primary);
     color: #fff;
 }
-.icon:hover{
+
+.icon:hover {
     background-color: var(--color-primary-hover);
     color: #000;
 }
 
 .social-icons .icon {
-    margin-right: 10px; /* Espacio entre íconos sociales */
+    margin-right: 10px;
+    /* Espacio entre íconos sociales */
 }
 
 /* Ajusta los estilos según tus preferencias y asegúrate de tener las imágenes correspondientes en tu proyecto */

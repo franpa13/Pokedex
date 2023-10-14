@@ -4,6 +4,7 @@ const apiControllerPokemon = require(`../controllers/pokeController.js`)
 
 // GET HOME PAGE
 router.get("/", apiControllerPokemon.index)
+router.get("/pokemon/:id",apiControllerPokemon.pokemon)
 
 
 module.exports = router
