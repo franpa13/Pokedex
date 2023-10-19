@@ -1,0 +1,53 @@
+/* ESTILOS SEARCH RESULTS */
+
+.card-info__search{
+    
+    display: flex;
+   
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.card-img-search{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    border-radius: 10px;
+}
+.card-img-search img{
+    width: 18vw;
+    border-radius: 5px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    justify-content: center;
+}
+.img__name {
+    width: 100%;
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top: 6px;
+   border-radius: 10px;
+}
+.img__error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+}
+.img__error img{
+   
+    width: 20vw;
+}
+.not__results {
+    margin: 1vw;
+}

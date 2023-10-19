@@ -28,6 +28,9 @@
                     <option value="poison">Poison</option>
                     <option value="water">Water</option>
                     <option value="grass">Grass</option>
+                    <option value="electric">Electric</option>
+                    <option value="fairy">Fairy</option>
+                    <option value="ground">Ground</option>
                     <option value="flying">Flying</option>
                     <option value="bug">Bug</option>
                     <!-- Agrega más opciones de tipo según sea necesario -->
@@ -41,12 +44,12 @@
         <main class="list-pokemon">
             <% pokemones.results.forEach((pokemon, index)=> { %>
 
-                <a href="/pokemon/<%= index +1 %>" class="card-pokemon">
+                <a href="/pokemonPageDos/<%= index +1 %>" class="card-pokemon">
                     <div class="card-img">
                         <img src="<%= images[index] %>" alt="pokemon <%= pokemon.name %>" />
                     </div>
                     <div class="card-info">
-                        <span class="pokemon-id">N° <%= index + 1 %></span>
+                        <span class="pokemon-id">N° <%= index + 21 %></span>
                         <h3>
                             <%= pokemon.name %>
                         </h3>
@@ -65,12 +68,12 @@
                 <% }) %>
            
         </main>
+       
         <div class="container__btn">
            
-             <a href="/pageDos"> <i class="fa-solid fa-arrow-right"></i></a>
-     
-          </div>
-        </main>
+            <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+    
+         </div>
         <!-- FOOTER -->
         <%- include('./partials/footer') %>
 

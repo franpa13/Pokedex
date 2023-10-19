@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+        <div class="card-info__search">
+            <% if (pokemon.length> 0) { %>
+                <% pokemon.forEach(p=> { %>
+                    <div class="card-img-search">
+                        <a href="/pokemon/<%= p.id %>">
+                            <img src="<%= p.image %>" alt="pokemon <%= p.name %>" />
+                        </a>
+                        <div class="img__name">
+                            <% if (p.id !==null) { %>
+                                <span class="pokemon-id">
+                                    <%= p.id %>
+                                </span>
+                                <% } %>
+                                    <h3>
+                                        <%= p.name %>
+                                    </h3>
+                                    <div class="card-types">
+                                        <span class="<%= p.types[0] %>">
+                                            <%= p.types[0] %>
+                                        </span>
+                                        <span class="<%= p.types[1] %>">
+                                            <%= p.types[1] %>
+                                        </span>
+                                    </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <div class="img__error">
+                                <h1 class="not__results">No se encontraron Resultados</h1>
+                                <img src="/img/pokemon__triste.png" alt="">
+                            </div>
+                            <% } %>
+        </div>
+
+        <%- include('./partials/footer') %>
+</body>
+
+</html>

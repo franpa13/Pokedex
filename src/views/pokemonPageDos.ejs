@@ -10,14 +10,18 @@
 
 </head>
 
-<body>
+<body class="body__footer">
     <%- include('./partials/header') %>
         <main class="main-pokemon">
             <div class="header-main-pokemon">
 
                 <div class="container-img-pokemon">
                     <div class="number__pokemon">
-                        <span class="number-pokemon"> #<%= id %> </span>
+                        <span class="number-pokemon"> #<%= id + 20 %>
+                                </span>
+          
+
+
                         <img src="<%= datosPokemon.sprites.other.home.front_shiny %>" alt="pokemon bulbasaur" />
                     </div>
                     <div class="nombre__pokemon">
